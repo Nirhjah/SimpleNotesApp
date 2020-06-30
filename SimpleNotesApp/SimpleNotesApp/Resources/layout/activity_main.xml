@@ -35,5 +35,13 @@
         android:layout_marginTop="200.0dp"
         android:layout_marginBottom="300.0dp"
         android:hint="Type note here" />
+    <TextView
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="300.0dp"
+        android:layout_marginBottom="300.0dp"
+        android:id="@+id/textView1" />
 
 </android.support.design.widget.CoordinatorLayout>
