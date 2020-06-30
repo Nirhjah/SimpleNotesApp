@@ -24,6 +24,14 @@ namespace SimpleNotesApp
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
+
+
+
+            var textView1 = FindViewById<TextView>(Resource.Id.textView1);
+            var edutText1 = FindViewById<EditText>(Resource.Id.editText1);
+            var button1 = FindViewById<Button>(Resource.Id.button1);
+
+            button1.Click += button1OnClick;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -31,6 +39,8 @@ namespace SimpleNotesApp
             MenuInflater.Inflate(Resource.Menu.menu_main, menu);
             return true;
         }
+
+        
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -43,11 +53,13 @@ namespace SimpleNotesApp
             return base.OnOptionsItemSelected(item);
         }
 
+        public void button1OnClick(object sender, EventArgs eventArgs) { 
+            
+        }
+
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+            
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
